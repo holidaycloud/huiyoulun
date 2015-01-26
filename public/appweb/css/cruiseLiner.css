@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body{ background:#EFEDEE; color:#2C2C2F; font-family: "Microsoft Yahei", "微软雅黑", SimHei,Tahoma, Arial, Helvetica, STHeiti;  _font-family: Tahoma,Arial,Helvetica,STHeiti; text-align:Justify}
-.title01{ height:35px; line-height:35px; padding:0 10px; font-weight:bold; }
+.title01{ height:35px; line-height:35px; padding:0 20px; font-weight:bold; border-top-left-radius:5px; border-top-right-radius:5px;}
 .title01 .loginico01{ float:left; background:url(../images/icon01.png) no-repeat left center; background-size:20px 20px; width:25px; height:35px;}
 .cont01{ border-top:#fff solid 1px; -webkit-box-shadow: 0px -2px 3px #c9c7c8; -moz-box-shadow: 0px -2px 3px #c9c7c8; box-shadow: 0px -2px 3px #c9c7c8;}
 .cont01 .box01{word-wrap:break-word; clear:both; padding:15px 25px; line-height:18px; font-size:14px; }
@@ -23,3 +23,21 @@ a.loginForgetPw:active{ color:#F6921E}
 .findPWcancel{ color:#2C2C2F; padding-left:20px; font-size:14px;}
 .findPWcancel:hover{ color:#F6921E}
 .modal-dialog {margin: 40% auto;}
+.orange{ color:#f69524;}
+.bottomBtBox01{ background:#F6921E; position:fixed; bottom:0; width:100%;}
+.bottomBtBox01 .linkbox{ background:url(../images/line01.png) no-repeat center center; background-size:28px 28px; height:50px;}
+.bottomBtBox01 a{ float:left; display:block; width:50%; height:50px; line-height:50px; font-size:18px; text-align:center; color:#fff;}
+.bottomBtBox01 a:hover{ text-decoration:none;}
+
+/*bookSuccess*/
+.title01 .loginico02{ float:left; background:url(../images/icon03.png) no-repeat left center; background-size:20px 20px; width:25px; height:35px;}
+.wordIcon{ color:#f69524; font-size:10px; height:25px; border:#f69524 solid 1px; padding:0 2px; border-radius:2px;}
+.Whitebox{ background:#fff; padding:10px 25px; -webkit-box-shadow:0 0 3px #c9c7c8; -moz-box-shadow:0 0 3px #c9c7c8; box-shadow:0 0 3px #c9c7c8; }
+.successNotice{ background:url(../images/icon04.png) no-repeat left top; background-size:18px 18px; padding-left:25px; color:#f69524; font-size:14px; line-height:18px;}
+.successNotice p{ padding:0; margin:0; line-height:18px;}
+.successNoticeList{ list-style:none; padding:0; margin:0; padding-bottom:10px; border-bottom:#2C2C2F dashed 1px; clear:both}
+.successNoticeList02{ list-style:none; padding:0; margin:0; padding:10px 0; margin-bottom:40px;  clear:both}
+.successNoticeList li, .successNoticeList02 li{ line-height:1.5em; clear:both;}
+.successNoticeList label{ float:left}
+.successNoticeList .spaceleft10{ padding-left:10px;}
+.successNoticeList .info{ float:left; text-align:left}
