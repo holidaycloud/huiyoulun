@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>国际邮轮度假中心 预定第二步</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/cruiseLiner.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    		$(document).ready( function() {
+					$('.headbox').click(function(){
+							if($(this).next().is(':hidden')){
+									$(this).find('.orangeico').removeClass('orangeico').addClass('garyico');
+									$(this).find('.arrowdown').removeClass('arrowdown').addClass('arrowup');
+									$(this).next().show();
+								}else{
+									$(this).find('.garyico').removeClass('orangeico').addClass('garyico');
+									$(this).find('.arrowup').removeClass('arrowup').addClass('arrowdown');
+									$(this).next().hide();
+									};
+						});
+				});
+    </script>
+</head>
+
+<body>
+		<div class="title01">
+        		<i class="loginico02"></i><span>预定第二步：选择舱房</span>
+        </div>
+        <div class="cont01">
+        		<!--说明文字-->
+        		 <div class="box01">
+        		   <p>12月19日海洋绿洲号11晚12天澳洲新西兰游</p>
+        		   <p><span class="wordIcon">团队游</span>【上海出发】出发日期：2015-12-19</p>
+        		 </div>
+               	<!--预定白底背景-->
+                <div class="bookBox">
+                		<div class="bookStep2">
+                        		<h5>选择房型</h5>
+                                <div class="roombox">
+                                		<!--头部标题-->
+                                		<div class="headbox">
+                                        		<p class="titlebg orangeico">
+                                                		<span class="roomName">1. 标准内舱双人房</span>
+                                                        <span class="roomPer">最大入住：4人</span>
+                                                </p>
+                                        </div>
+                                        <!--伸缩内容-->
+                                        <div class="infobox">
+                                        		<ul>
+                                                		<li>选择出游人数：</li>
+                                                        <li class="dashline">
+                                                        	<span class="gray">成人</span>
+                                                            <div class="numchoose">
+                                                                    <a class="btlink">-</a>
+                                                                    <input type="text" class="numtext" value="1">
+                                                                    <a class="btlink">+</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                        	<span class="gray">儿童</span>
+                                                            <div class="numchoose">
+                                                                    <a class="btlink">-</a>
+                                                                    <input type="text" class="numtext" value="1">
+                                                                    <a class="btlink">+</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>游客姓名：（姓名之间请使用“；”分号符分割）</li>
+                                                        <li><input type="text" class="form-control input-sm" placeholder="输入游客姓名"></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <div class="roombox">
+                                		<!--头部标题-->
+                                		<div class="headbox">
+                                        		<p class="titlebg orangeico">
+                                                		<span class="roomName">1. 标准内舱家庭房</span>
+                                                        <span class="roomPer">最大入住：4人</span>
+                                                </p>
+                                        </div>
+                                        <!--伸缩内容-->
+                                        <div class="infobox">
+                                        		<ul>
+                                                		<li>选择出游人数：</li>
+                                                        <li class="dashline">
+                                                        	<span class="gray">成人</span>
+                                                            <div class="numchoose">
+                                                                    <a class="btlink">-</a>
+                                                                    <input type="text" class="numtext" value="4">
+                                                                    <a class="btlink">+</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                        	<span class="gray">儿童</span>
+                                                            <div class="numchoose">
+                                                                    <a class="graylink">-</a>
+                                                                    <input type="text" class="numtext" value="0">
+                                                                    <a class="btlink">+</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>游客姓名：（姓名之间请使用“；”分号符分割）</li>
+                                                        <li><input type="text" class="form-control input-sm" placeholder="输入游客姓名"></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <h5>其他费用</h5>
+                                <div class="roombox">
+                                		<!--其他费用-->
+                                		<div class="headbox">
+                                            <p class="titlebg arrowdown">旅游意外险</p>
+                                        </div>
+                                        <!--伸缩内容-->
+                                        <div class="infobox">
+                                        		<ul>
+                                                		<li class="gray f12">保险内容一段文字。</li>
+                                                        <li>
+                                                        	<span class="gray">单价：50元/人</span>
+                                                            <div class="numchoose">
+                                                                    <a class="graylink">-</a>
+                                                                    <input type="text" class="numtext" value="0">
+                                                                    <a class="btlink">+</a>
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <!--联系人信息-->
+                                <div class="LXbox">
+                                <ul>
+                                      <li>
+                                            <div class="infoN">联系人姓名</div>
+                                            <div class="infoinput"><input type="text" class="form-control input-sm" placeholder="输入联系人姓名"></div>
+                                        </li>
+                                      <li>
+                                            <div class="infoN">联系人电话</div>
+                                            <div class="infoinput"><input type="text" class="form-control input-sm" placeholder="输入联系人电话"></div>
+                                        </li>
+                                      <li>
+                                            <div class="infoN">预定备注</div>
+                                            <div class="infoinput"><textarea name="" cols="" rows="4" class="form-control input-sm" ></textarea></div>
+                                        </li>
+                                  </ul>
+                                </div>
+                        </div>
+                </div> 
+
+       </div>
+       <!--底部连接-->
+       <div class="bottomBtBox02">
+       			<div class="orderPayDetail">
+                		<p><strong>订单总额：￥34223</strong><br>舱房：2间  人数：6人</p>
+           		  <a href="#">电话咨询</a>
+                </div>
+                <div class="orderConfirm">
+                		<a href="#">在线预订</a>
+                </div>
+       </div>
+</body>
+</html>

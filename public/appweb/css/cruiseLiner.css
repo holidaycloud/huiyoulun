@@ -30,6 +30,14 @@ a.loginForgetPw:active{ color:#F6921E}
 .bottomBtBox01 a:hover{ text-decoration:none;}
 .bottomBtBox01 .itelephone{ display:inline-block; background:url(../images/icon11.png) no-repeat left bottom; background-size:22px 22px; width:25px; height:22px; vertical-align: middle}
 .bottomBtBox01 .onlineYD{display:inline-block; background:url(../images/icon10.png) no-repeat right bottom; background-size:22px 22px; width:25px; height:22px; vertical-align: middle}
+.bottomBtBox02{ background:#F6921E; position:fixed; bottom:0; width:100%; color:#fff;}
+.bottomBtBox02 a{ display:block; line-height:50px; text-align:center; color:#fff; cursor:pointer}
+.bottomBtBox02 a:hover{ text-decoration:none;}
+.bottomBtBox02 .orderPayDetail{ float:left; width:75%; background:url(../images/line01.png) no-repeat right center; background-size:28px 28px; height:50px;}
+.bottomBtBox02 .orderPayDetail  a { float:right; padding:0 30px 0 10px; font-size:14px;}
+.bottomBtBox02 .orderPayDetail p{ line-height:20px; font-size:13px; padding:5px 0 0 15px; float:left; font-weight:lighter;}
+.bottomBtBox02 .orderPayDetail p strong{ font-size:14px;}
+.bottomBtBox02 .orderConfirm{ float:left; width:25%; font-size:16px; font-weight:bold;}
 
 /*book*/
 .title01 .loginico02{ float:left; background:url(../images/icon03.png) no-repeat left center; background-size:20px 20px; width:25px; height:35px;}
@@ -59,7 +67,7 @@ a.loginForgetPw:active{ color:#F6921E}
 .bookListCon .roomName{ float:left; width:40%; font-size:14px; color:#333333; font-weight:bold;}
 .bookListCon .roomPerNum{float:left; width:30%; font-size:12px; color:#999999;}
 .bookListCon .roomNum{ float:right; width:30%}
-.bookListCon .roomNum a{float:left; display:block; width:20px; height:20px; line-height:13px; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
+.bookListCon .roomNum a{float:left; display:block; width:18px; height:18px; line-height:13px; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
 .bookListCon .roomNum a.btlink{  border:#F6921E solid 2px; color:#F6921E; }
 .bookListCon .roomNum a.graylink{border:#989898 solid 2px; color:#989898;}
 .bookListCon .roomNum .numtext{float:left; width:30px; border:#999 solid 1px; border-radius:2px; text-align:center; color:#333333; height:20px; line-height:20px; font-size:14px; margin-right:5px;}
@@ -69,7 +77,33 @@ a.loginForgetPw:active{ color:#F6921E}
 .bookListNotice{margin:5px; padding:5px; height:auto; overflow:hidden; line-height:1.4;}
 .bookListNotice h5{ padding:0; margin:0; line-height:1.8; font-size:14px;}
 .bookListNotice p{ color:#4D4D4D; line-height:1.3; font-size:13px;}
-
+.bookStep2{ padding:10px;}
+.bookStep2 h5{ padding:0; margin:0; line-height:1.4; font-size:14px; padding:0 5px;}
+.bookStep2 .roombox{ background:#EFEDEE; margin-top:20px; margin-bottom:10px; position:relative; border-radius:5px; padding:20px 5px 5px 5px}
+.bookStep2 .roombox .headbox{  position:absolute; left:0; top:-15px; width:100%;  height:30px; line-height:30px; background-image:-webkit-linear-gradient(to top, #c1c1c1,#eaeaea); border-radius:5px; background-image:linear-gradient(to top,  #c1c1c1,#eaeaea); border:#eaeaea solid 1px; -webkit-box-shadow:0 0 3px #c9c7c8; -moz-box-shadow:0 0 3px #c9c7c8; box-shadow:0 1px 3px #c9c7c8;}
+.bookStep2 .roombox .headbox .titlebg{ margin:0 5px; height:30px; line-height:30px; padding-right:30px;}
+.bookStep2 .roombox .headbox .garyico{ background:url(../images/icon12.png) no-repeat right center; background-size:16px 16px;}
+.bookStep2 .roombox .headbox .orangeico{background:url(../images/icon13.png) no-repeat right center; background-size:16px 16px;}
+.bookStep2 .roombox .headbox .roomName{ font-size:14px; color:#333333; font-weight:bold;}
+.bookStep2 .roombox .headbox .roomPer{ font-size:13px; color:#666666; padding-left:10px;}
+.bookStep2 .roombox  .headbox .arrowdown{ background:url(../images/icon08.png) no-repeat right center; background-size:12px 12px;}
+.bookStep2 .roombox  .headbox .arrowup{ background:url(../images/icon09.png) no-repeat right center; background-size:12px 12px;}
+.bookStep2 .roombox .infobox{ line-height:1.2; display:none;}
+.bookStep2 .roombox .infobox ul{ list-style:none; padding:0; margin:0;}
+.bookStep2 .roombox .infobox li{ padding:5px; clear:both; height:auto; overflow:hidden;}
+.bookStep2 .roombox .gray{ color:#666666}
+.bookStep2 .roombox .f12{ font-size:12px;}
+.bookStep2 .roombox .dashline{ border-bottom:#666666 dashed 1px;}
+.bookStep2 .roombox .numchoose{ float:right;}
+.bookStep2 .roombox .numchoose a{float:left; display:block; width:18px; height:18px; line-height:18px; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
+.bookStep2 .roombox .numchoose a.btlink{  border:#F6921E solid 2px; color:#F6921E; }
+.bookStep2 .roombox .numchoose a.graylink{border:#989898 solid 2px; color:#989898;}
+.bookStep2 .roombox .numchoose .numtext{float:left; width:30px; border:#999 solid 1px; border-radius:2px; text-align:center; color:#333333; height:20px; line-height:20px; font-size:14px; margin-right:5px;}
+.bookStep2 .LXbox{ padding:5px; margin-bottom:30px; height:auto; overflow:hidden;}
+.bookStep2 .LXbox ul{ list-style:none; padding:0; margin:0;}
+.bookStep2 .LXbox li{ padding:5px 0; height:auto; overflow:hidden; text-align:left; line-height:1.5}
+.bookStep2 .LXbox li .infoN{ float:left; width:30%;}
+.bookStep2 .LXbox li .infoinput{ float:left; width:70%;} 
 
 /*centerlist*/
 .title01 .centerico01{ float:left; background:url(../images/icon05.png) no-repeat left center; background-size:20px 20px; width:25px; height:35px;}
