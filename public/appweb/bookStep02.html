@@ -16,7 +16,7 @@
 									$(this).find('.arrowdown').removeClass('arrowdown').addClass('arrowup');
 									$(this).next().show();
 								}else{
-									$(this).find('.garyico').removeClass('orangeico').addClass('garyico');
+									$(this).find('.garyico').removeClass('garyico').addClass('orangeico');
 									$(this).find('.arrowup').removeClass('arrowup').addClass('arrowdown');
 									$(this).next().hide();
 									};
@@ -105,7 +105,7 @@
                                                 </ul>
                                         </div>
                                 </div>
-                                <h5>其他费用</h5>
+                                <h5><strong>其他费用</strong></h5>
                                 <div class="roombox">
                                 		<!--其他费用-->
                                 		<div class="headbox">
@@ -147,15 +147,75 @@
                 </div> 
 
        </div>
+       <!--费用明细弹出层-->
+       <div class="modal costDetail" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+              	<div class="costDetailModalTitle">
+                		<div class="leftorang"></div><div class="entry-trangle"></div>
+                </div>
+                <div class="modal-content costDetail-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><strong>费用明细</strong></h4>
+                  </div>
+                  <div class="modal-body">
+                  			<!--room1-->
+                    		<div class="cosDetail-roombox">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="50%" height="20" align="left" valign="middle"><strong>1. 标准内舱双人房</strong></td>
+                                <td width="30%" align="left" valign="middle"><strong>成人 1人</strong></td>
+                                <td width="20%" align="right" valign="middle"><strong>儿童 1人</strong></td>
+                              </tr>
+                            </table>
+                            	<div class="perprice">
+                                		<div class="personNum">第1/2人</div>￥3200
+                                </div>
+                            </div>
+                  			<!--room1-->
+                    		<div class="cosDetail-roombox">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="50%" height="20" align="left" valign="middle"><strong>2. 标准内舱家庭房</strong></td>
+                                <td width="30%" align="left" valign="middle"><strong>成人 4人</strong></td>
+                                <td width="20%" align="right" valign="middle"><strong>儿童 1人</strong></td>
+                              </tr>
+                            </table>
+                            	<div class="perprice">
+                                		<div class="personNum">第1/2人</div>￥3200
+                                </div>
+                            	<div class="perprice">
+                                		<div class="personNum">第3/4人成人</div>￥2200
+                                </div>
+                            	<div class="perprice">
+                                		<div class="personNum">第3/4人儿童</div>￥3200
+                                </div>
+                            </div>
+                            <hr class="hr-dash"/>
+                            <div class="cosDetail-subtotal">小计￥12500</div>
+                             <div class="cosDetail-roombox">
+                                    <p>其他费用</p>
+                                    <p>旅游意外险<span class="span-right">￥50x6</span></p>
+                            </div>
+                            <hr class="hr-dash"/>
+                            <div class="cosDetail-subtotal">小计￥300</div>
+                            <div class="cosDetail-roombox">
+                            		<p><strong>人均金额</strong><span class="span-right orange">￥6555/人</span></p>
+                            </div>
+                  </div>
+                </div>
+              </div>
+        </div>
        <!--底部连接-->
        <div class="bottomBtBox02">
        			<div class="orderPayDetail">
                 		<p><strong>订单总额：￥34223</strong><br>舱房：2间  人数：6人</p>
-           		  <a href="#">电话咨询</a>
+           		  <a href="#" data-toggle="modal" data-target="#myModal">费用明细</a>
                 </div>
                 <div class="orderConfirm">
                 		<a href="#">在线预订</a>
                 </div>
+
        </div>
 </body>
 </html>

@@ -22,8 +22,7 @@ a.loginForgetPw:active{ color:#F6921E}
 .modal-headerbor h4{ text-align:center;}
 .findPWcancel{ color:#2C2C2F; padding-left:20px; font-size:14px;}
 .findPWcancel:hover{ color:#F6921E}
-.modal-dialog {margin: 40% auto;}
-.orange{ color:#f69524;}
+.login-dialog {margin: 40% auto;}
 .bottomBtBox01{ background:#F6921E; position:fixed; bottom:0; width:100%;}
 .bottomBtBox01 .linkbox{ background:url(../images/line01.png) no-repeat center center; background-size:28px 28px; height:50px;}
 .bottomBtBox01 a{ float:left; display:block; width:50%; height:50px; line-height:50px; font-size:18px; text-align:center; color:#fff;}
@@ -38,6 +37,27 @@ a.loginForgetPw:active{ color:#F6921E}
 .bottomBtBox02 .orderPayDetail p{ line-height:20px; font-size:13px; padding:5px 0 0 15px; float:left; font-weight:lighter;}
 .bottomBtBox02 .orderPayDetail p strong{ font-size:14px;}
 .bottomBtBox02 .orderConfirm{ float:left; width:25%; font-size:16px; font-weight:bold;}
+
+.orange{ color:#f69524;}
+
+/*费用明细*/
+.costDetail{bottom:50px;}
+.costDetail>.modal-backdrop { bottom:50px;}
+.costDetail>.modal-dialog{ width:100%; margin:0; position:absolute; bottom:-1px;}
+.costDetail-content{ border-radius:0; border:0;}
+.costDetail-content>.modal-header{ border:none; padding:10px 15px 0;}
+.costDetail-content>.modal-header h4{ font-size:16px;}
+.costDetail-content>.modal-body{ padding:0 15px;}
+.costDetailModalTitle{ height:10px; clear:both;}
+.costDetailModalTitle .leftorang{ background:#F6921E; float:left; width:25%; height:10px;}
+.costDetailModalTitle .entry-trangle{ float:left; width:0; height:0; border-top:10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid #F6921E; }
+.cosDetail-roombox{ padding:0 0 5px 0;}
+.cosDetail-roombox p{ padding:0; margin:0; line-height:20px;}
+.cosDetail-roombox .perprice{ height:20px; line-height:20px;  font-size:14px;  color:#F6921E; padding-left:1em;}
+.cosDetail-roombox .perprice .personNum{ float:left; width:100px; color:#666666;}
+.hr-dash{ border-bottom:#CCC dotted 1px; height:0; margin:0; padding:0;}
+.cosDetail-subtotal{ color:#F6921E; text-align:right; font-size:14px; line-height:30px;}
+.span-right{ float:right;}
 
 /*book*/
 .title01 .loginico02{ float:left; background:url(../images/icon03.png) no-repeat left center; background-size:20px 20px; width:25px; height:35px;}
@@ -67,7 +87,7 @@ a.loginForgetPw:active{ color:#F6921E}
 .bookListCon .roomName{ float:left; width:40%; font-size:14px; color:#333333; font-weight:bold;}
 .bookListCon .roomPerNum{float:left; width:30%; font-size:12px; color:#999999;}
 .bookListCon .roomNum{ float:right; width:30%}
-.bookListCon .roomNum a{float:left; display:block; width:18px; height:18px; line-height:13px; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
+.bookListCon .roomNum a{float:left; display:block; width:22px; height:22px; line-height:18px; vertical-align:middle; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
 .bookListCon .roomNum a.btlink{  border:#F6921E solid 2px; color:#F6921E; }
 .bookListCon .roomNum a.graylink{border:#989898 solid 2px; color:#989898;}
 .bookListCon .roomNum .numtext{float:left; width:30px; border:#999 solid 1px; border-radius:2px; text-align:center; color:#333333; height:20px; line-height:20px; font-size:14px; margin-right:5px;}
@@ -95,7 +115,7 @@ a.loginForgetPw:active{ color:#F6921E}
 .bookStep2 .roombox .f12{ font-size:12px;}
 .bookStep2 .roombox .dashline{ border-bottom:#666666 dashed 1px;}
 .bookStep2 .roombox .numchoose{ float:right;}
-.bookStep2 .roombox .numchoose a{float:left; display:block; width:18px; height:18px; line-height:18px; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
+.bookStep2 .roombox .numchoose a{float:left; display:block; width:22px; height:22px; line-height:18px; text-align:center; border-radius:15px; margin-right:5px; cursor:pointer; font-weight:bold;}
 .bookStep2 .roombox .numchoose a.btlink{  border:#F6921E solid 2px; color:#F6921E; }
 .bookStep2 .roombox .numchoose a.graylink{border:#989898 solid 2px; color:#989898;}
 .bookStep2 .roombox .numchoose .numtext{float:left; width:30px; border:#999 solid 1px; border-radius:2px; text-align:center; color:#333333; height:20px; line-height:20px; font-size:14px; margin-right:5px;}
