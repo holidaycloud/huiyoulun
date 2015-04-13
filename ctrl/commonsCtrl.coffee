@@ -1,7 +1,6 @@
+request = require "request"
+config = require "./../config/config.json"
 class CommonsCtrl
-  request = require "request"
-  config = require "./../config/config.json"
-
   @cruiseArea:(fn) ->
     url = "#{config.inf.host}:#{config.inf.port}/cruisearea/getall"
     request {url,timeout:3000},(err,response,body) ->
@@ -37,5 +36,4 @@ class CommonsCtrl
           fn new Error(res.error)
         else
           fn null,res
-
 module.exports = CommonsCtrl

@@ -396,7 +396,9 @@ API文档
 +++++++++++++++++++++++++++++++
 8. 登录帐户
 
-    URL: https://xxxhost/services/authuser
+    URL: https://xxxhost/services/authuser //https://www.huiyoulun.com/services/authuser...
+
+    绑定接口改为bindWeChat?loginName=xxx&password=xxx&openId=xxx， 登陆接口authUser?openId=xxx, 也可以authUser?loginName=xxx&password=xxx,
 
     参数(必须):
         loginName(荟邮系统的用户邮箱地址或手机号),
