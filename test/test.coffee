@@ -1,9 +1,14 @@
 ProductCtrl = require "./../ctrl/productCtrl"
 CommonsCtrl = require "./../ctrl/commonsCtrl"
 MemberCtrl = require "./../ctrl/memberCtrl"
+WeixinCtrl = require "./../ctrl/weixinCtrl"
 
-MemberCtrl.login "zzy@holidaycloud.cn","20070428",(err,res) ->
+WeixinCtrl.accessToken (err,res) ->
   console.log err,res
+
+
+#MemberCtrl.login "zzy@holidaycloud.cn","20070428",(err,res) ->
+#  console.log err,res
 
 #ProductCtrl.productList(null, null, null, "2015-07", null,true, (err,res) ->
 #  console.log err,res
