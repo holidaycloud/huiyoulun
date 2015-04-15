@@ -37,6 +37,8 @@
 
   app.set("view engine", "ejs");
 
+  app.enable("trust proxy");
+
   app.use(favicon());
 
   app.use(bodyParser.json());
