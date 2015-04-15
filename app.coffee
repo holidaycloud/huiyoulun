@@ -2,6 +2,7 @@ express = require "express"
 path = require "path"
 favicon = require "static-favicon"
 cookieParser = require "cookie-parser"
+session = require "cookie-session"
 bodyParser = require "body-parser"
 config = require "./config/config.json"
 
@@ -24,8 +25,15 @@ app.use bodyParser.urlencoded()
 app.use cookieParser()
 app.use express.static path.join __dirname,"public"
 app.use log4js.connectLogger logger,level:log4js.levels.INFO
+app.use(session({
+  secret:'huiyoulun'
+}));
 app.use (req,res,next) ->
   res.set "X-Powered-By","Server"
+  next()
+
+app.use (req,res,next) ->
+  res.locals.user = req.session.user
   next()
 
 app.use "/",index
