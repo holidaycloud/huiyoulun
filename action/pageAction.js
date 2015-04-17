@@ -38,6 +38,7 @@
       var user;
       if (err == null) {
         user = results.autoLogin;
+        res.locals.user = user;
         req.session.user = user;
         return next();
       } else {

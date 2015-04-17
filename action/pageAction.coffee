@@ -23,6 +23,7 @@ exports.weixinLogin = (req,res,next) ->
     ,(err,results) ->
       if not err?
         user = results.autoLogin
+        res.locals.user = user
         req.session.user = user
         next()
       else
