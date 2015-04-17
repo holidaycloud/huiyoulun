@@ -32,6 +32,7 @@
     openid = req.body.openid;
     console.log(loginName, password, openid);
     return MemberCtrl.bindWeChat(loginName, password, openid, function(err, result) {
+      console.log(err, result);
       if (err == null) {
         req.session.user = result;
       }

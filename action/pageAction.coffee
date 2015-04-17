@@ -18,6 +18,7 @@ exports.doLogin = (req,res) ->
   openid = req.body.openid
   console.log loginName,password,openid
   MemberCtrl.bindWeChat loginName,password,openid,(err,result) ->
+    console.log err,result
     if not err?
       req.session.user = result
     res.redirect "/"
