@@ -10,7 +10,7 @@
 
   async = require("async");
 
-  exports.weixinLogin = function(req, res) {
+  exports.weixinLogin = function(req, res, next) {
     var code, state;
     code = req.query.code;
     state = req.query.state;

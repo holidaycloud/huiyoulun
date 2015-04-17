@@ -10,7 +10,7 @@
 
   router.post("/dologin", PageAction.doLogin);
 
-  router.get("/", PageAction.index);
+  router.get("/", PageAction.weixinLogin, PageAction.index);
 
   router.get("/login", PageAction.login);
 

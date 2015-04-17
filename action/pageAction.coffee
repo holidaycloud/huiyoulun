@@ -3,7 +3,7 @@ MemberCtrl = require "./../ctrl/memberCtrl"
 WeixinCtrl = require "./../ctrl/weixinCtrl"
 async = require "async"
 
-exports.weixinLogin = (req,res) ->
+exports.weixinLogin = (req,res,next) ->
   code = req.query.code
   state = req.query.state
   async.auto
