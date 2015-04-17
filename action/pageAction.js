@@ -15,16 +15,23 @@
     code = req.query.code;
     state = req.query.state;
     return WeixinCtrl.codeAccessToken(code, function(err, result) {
-      console.log(err, result);
-      return res.render("login");
+      if (err) {
+        return res.status(500).end();
+      } else {
+        return res.render("login", {
+          openid: result.openid
+        });
+      }
     });
   };
 
   exports.doLogin = function(req, res) {
-    var loginName, password;
+    var loginName, openid, password;
     loginName = req.body.loginName;
     password = req.body.password;
-    return MemberCtrl.login(loginName, password, function(err, result) {
+    openid = req.body.openid;
+    console.log(loginName, password, openid);
+    return MemberCtrl.bindWeChat(loginName, password, openid, function(err, result) {
       if (err == null) {
         req.session.user = result;
       }

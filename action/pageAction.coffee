@@ -7,13 +7,17 @@ exports.login = (req,res) ->
   code = req.query.code
   state = req.query.state
   WeixinCtrl.codeAccessToken code,(err,result) ->
-    console.log err,result
-    res.render "login"
+    if err
+      res.status(500).end()
+    else
+      res.render "login",openid:result.openid
 
 exports.doLogin = (req,res) ->
   loginName = req.body.loginName
   password = req.body.password
-  MemberCtrl.login loginName,password,(err,result) ->
+  openid = req.body.openid
+  console.log loginName,password,openid
+  MemberCtrl.bindWeChat loginName,password,openid,(err,result) ->
     if not err?
       req.session.user = result
     res.redirect "/"
