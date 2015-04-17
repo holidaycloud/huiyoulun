@@ -4,15 +4,20 @@ WeixinCtrl = require "./../ctrl/weixinCtrl"
 async = require "async"
 
 exports.weixinLogin = (req,res,next) ->
+  console.log "----------weixinLogin------------"
   code = req.query.code
   state = req.query.state
   async.auto
     getOpenid:(cb) ->
       WeixinCtrl.codeAccessToken code,(err,result) ->
+        console.log "----------codeAccessToken------------"
+        console.log err,result
         cb err,result
     autoLogin:["getOpenid",(cb,results) ->
       openid = results.getOpenid.openid
       MemberCtrl.weixinLogin openid,(err,result) ->
+        console.log "----------autoLogin------------"
+        console.log err,result
         cb err,result
     ]
     ,(err,results) ->

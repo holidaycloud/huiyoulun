@@ -12,11 +12,14 @@
 
   exports.weixinLogin = function(req, res, next) {
     var code, state;
+    console.log("----------weixinLogin------------");
     code = req.query.code;
     state = req.query.state;
     return async.auto({
       getOpenid: function(cb) {
         return WeixinCtrl.codeAccessToken(code, function(err, result) {
+          console.log("----------codeAccessToken------------");
+          console.log(err, result);
           return cb(err, result);
         });
       },
@@ -25,6 +28,8 @@
           var openid;
           openid = results.getOpenid.openid;
           return MemberCtrl.weixinLogin(openid, function(err, result) {
+            console.log("----------autoLogin------------");
+            console.log(err, result);
             return cb(err, result);
           });
         }
