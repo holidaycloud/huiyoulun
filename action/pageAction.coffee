@@ -3,6 +3,26 @@ MemberCtrl = require "./../ctrl/memberCtrl"
 WeixinCtrl = require "./../ctrl/weixinCtrl"
 async = require "async"
 
+exports.weixinLogin = (req,res) ->
+  code = req.query.code
+  state = req.query.state
+  async.auto
+    getOpenid:(cb) ->
+      WeixinCtrl.codeAccessToken code,(err,result) ->
+        cb err,result
+    autoLogin:["getOpenid",(cb,results) ->
+      openid = results.getOpenid.openid
+      MemberCtrl.weixinLogin openid,(err,result) ->
+        cb err,result
+    ]
+    ,(err,results) ->
+      if not err?
+        user = results.autoLogin
+        req.session.user = user
+        next()
+      else
+        res.status(500).end()
+
 exports.login = (req,res) ->
   code = req.query.code
   state = req.query.state
@@ -16,9 +36,7 @@ exports.doLogin = (req,res) ->
   loginName = req.body.loginName
   password = req.body.password
   openid = req.body.openid
-  console.log loginName,password,openid
   MemberCtrl.bindWeChat loginName,password,openid,(err,result) ->
-    console.log err,result
     if not err?
       req.session.user = result
     res.redirect "/"

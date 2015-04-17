@@ -10,6 +10,37 @@
 
   async = require("async");
 
+  exports.weixinLogin = function(req, res) {
+    var code, state;
+    code = req.query.code;
+    state = req.query.state;
+    return async.auto({
+      getOpenid: function(cb) {
+        return WeixinCtrl.codeAccessToken(code, function(err, result) {
+          return cb(err, result);
+        });
+      },
+      autoLogin: [
+        "getOpenid", function(cb, results) {
+          var openid;
+          openid = results.getOpenid.openid;
+          return MemberCtrl.weixinLogin(openid, function(err, result) {
+            return cb(err, result);
+          });
+        }
+      ]
+    }, function(err, results) {
+      var user;
+      if (err == null) {
+        user = results.autoLogin;
+        req.session.user = user;
+        return next();
+      } else {
+        return res.status(500).end();
+      }
+    });
+  };
+
   exports.login = function(req, res) {
     var code, state;
     code = req.query.code;
@@ -30,9 +61,7 @@
     loginName = req.body.loginName;
     password = req.body.password;
     openid = req.body.openid;
-    console.log(loginName, password, openid);
     return MemberCtrl.bindWeChat(loginName, password, openid, function(err, result) {
-      console.log(err, result);
       if (err == null) {
         req.session.user = result;
       }

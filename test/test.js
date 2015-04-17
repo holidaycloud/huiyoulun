@@ -10,7 +10,7 @@
 
   WeixinCtrl = require("./../ctrl/weixinCtrl");
 
-  WeixinCtrl.accessToken(function(err, res) {
+  MemberCtrl.weixinLogin("odZ6Yt0D_IHamVTEstBksyxLigvU", function(err, res) {
     return console.log(err, res);
   });
 

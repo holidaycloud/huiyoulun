@@ -30,6 +30,27 @@
       });
     };
 
+    MemberCtrl.weixinLogin = function(openid, fn) {
+      var url;
+      url = "" + config.inf.host + ":" + config.inf.port + "/User/authUser?openId=" + openid;
+      return request({
+        url: url,
+        timeout: 3000
+      }, function(err, response, body) {
+        var res;
+        if (err) {
+          return fn(err);
+        } else {
+          res = body != null ? JSON.parse(body) : {};
+          if (res.error != null) {
+            return fn(new Error(res.error));
+          } else {
+            return fn(null, res);
+          }
+        }
+      });
+    };
+
     MemberCtrl.bindWeChat = function(loginName, password, openid, fn) {
       var url;
       url = "" + config.inf.host + ":" + config.inf.port + "/User/bindWeChat?loginName=" + loginName + "&password=" + password + "&openId=" + openid;
