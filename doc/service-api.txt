@@ -412,3 +412,6 @@ API文档
       "department": "邮轮部",          <- 部门
       "mobilePhone": "17649571936"    <- 手机号
     }
+
+  9.http://117.121.25.228:1338/User/SendMessage?name=1&tel=2&email=3&product=4
+

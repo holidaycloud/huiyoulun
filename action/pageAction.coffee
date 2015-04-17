@@ -1,23 +1,24 @@
 ProductCtrl = require "./../ctrl/productCtrl"
 MemberCtrl = require "./../ctrl/memberCtrl"
+WeixinCtrl = require "./../ctrl/weixinCtrl"
 async = require "async"
+
+exports.login = (req,res) ->
+  code = req.query.code
+  state = req.query.state
+  WeixinCtrl.codeAccessToken code,(err,result) ->
+    console.log err,result
+    res.render "login"
 
 exports.doLogin = (req,res) ->
   loginName = req.body.loginName
   password = req.body.password
   MemberCtrl.login loginName,password,(err,result) ->
     if not err?
-      console.log "--------save user to session-----------"
       req.session.user = result
-      console.log "-----user---------"
-      console.log req.session.user
-      console.log "------end user------------"
     res.redirect "/"
 
 exports.checkLogin = (req,res,next) ->
-  console.log "-----user---------"
-  console.log req.session.user
-  console.log "------end user------------"
   if req.session.user?
     next()
   else
